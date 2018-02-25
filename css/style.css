@@ -496,38 +496,38 @@ h2.article-head {
   visibility: hidden;
 }
 .markdown-content,
-.article-summary {
+rticle-summary {
   overflow-y: auto;
   overflow-x: hidden;
 }
 .markdown-content pre,
-.article-summary pre,
+rticle-summary pre,
 .markdown-content code,
-.article-summary code {
+rticle-summary code {
   font-family: 'Roboto Mono', Monaco, courier, monospace;
-  font-size: 13px;
+  font-size: 14px;
 }
 @media screen and (max-width: 480px) {
   .markdown-content pre,
-  .article-summary pre,
+  rticle-summary pre,
   .markdown-content code,
-  .article-summary code {
+  rticle-summary code {
     font-size: 12px;
   }
 }
 .markdown-content pre .line,
-.article-summary pre .line,
+rticle-summary pre .line,
 .markdown-content code .line,
-.article-summary code .line {
-  min-height: 13px;
+rticle-summary code .line {
+  min-height: 14px;
   margin: 2px 0;
 }
 .markdown-content p,
-.article-summary p {
+rticle-summary p {
   line-height: 1.6em;
 }
 .markdown-content p code,
-.article-summary p code {
+rticle-summary p code {
   background-color: #f8f8f8;
   color: #e96900;
   padding: 3px 5px;
@@ -536,27 +536,27 @@ h2.article-head {
   white-space: nowrap;
 }
 .markdown-content h1,
-.article-summary h1 {
+rticle-summary h1 {
   font-size: 1.8em;
 }
 .markdown-content h2,
-.article-summary h2 {
+rticle-summary h2 {
   font-size: 1.5em;
 }
 .markdown-content h3,
-.article-summary h3 {
+rticle-summary h3 {
   margin: 1em 0;
   font-size: 1.3em;
   padding-bottom: 0.3em;
   border-bottom: 1px solid #e5e5e5;
 }
 .markdown-content h4,
-.article-summary h4 {
+rticle-summary h4 {
   margin: 1em 0;
   font-size: 1.2em;
 }
 .markdown-content h4:before,
-.article-summary h4:before {
+rticle-summary h4:before {
   content: "#";
   color: #42b983;
   margin-right: 5px;
@@ -564,12 +564,12 @@ h2.article-head {
   font-weight: 700;
 }
 .markdown-content h5,
-.article-summary h5 {
+rticle-summary h5 {
   font-size: 1em;
   margin: 0.8em 0;
 }
 .markdown-content blockquote,
-.article-summary blockquote {
+rticle-summary blockquote {
   margin: 1em 0;
   padding: 15px 20px;
   border-left: 4px solid #42b983;
@@ -578,36 +578,43 @@ h2.article-head {
   border-top-right-radius: 2px;
 }
 .markdown-content ul,
-.article-summary ul,
+rticle-summary ul,
 .markdown-content ol,
-.article-summary ol {
+rticle-summary ol {
   overflow: auto;
   margin: 15px 0;
 }
 .markdown-content ul li,
-.article-summary ul li,
+rticle-summary ul li,
 .markdown-content ol li,
-.article-summary ol li {
+rticle-summary ol li {
   padding: 5px 0;
 }
 .markdown-content img,
-.article-summary img {
+rticle-summary img {
   max-width: 100%;
   display: block;
   margin: 20px auto;
   cursor: zoom-in;
 }
 .markdown-content figure,
-.article-summary figure {
+rticle-summary figure {
   background: #f8f8f8;
-  padding: 0 10px;
-  border-radius: 2px;
-  margin: 20px 0;
-  overflow: auto;
-  position: relative;
 }
+.markdown-content figure #background: #333,
+rticle-summary figure #background: #333,
+.markdown-content figure padding: 0 10px,
+rticle-summary figure padding: 0 10px,
+.markdown-content figure border-radius: 2px,
+rticle-summary figure border-radius: 2px,
+.markdown-content figure margin: 20px 0,
+rticle-summary figure margin: 20px 0,
+.markdown-content figure overflow: auto,
+rticle-summary figure overflow: auto,
+.markdown-content figure position: relative,
+rticle-summary figure position: relative,
 .markdown-content figure:after,
-.article-summary figure:after {
+rticle-summary figure:after {
   content: attr(data-lang);
   position: absolute;
   top: 0;
@@ -621,35 +628,35 @@ h2.article-head {
   font-weight: 500;
 }
 .markdown-content > table,
-.article-summary > table {
+rticle-summary > table {
   width: 100%;
 }
 .markdown-content > table thead,
-.article-summary > table thead {
+rticle-summary > table thead {
   background-color: #42b983;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: #e5e5e5;
 }
 .markdown-content > table thead th,
-.article-summary > table thead th {
+rticle-summary > table thead th {
   padding: 5px 10px;
   color: #fff;
 }
 .markdown-content > table tbody tr:nth-child(even),
-.article-summary > table tbody tr:nth-child(even) {
+rticle-summary > table tbody tr:nth-child(even) {
   background: #e6eed6;
 }
 .markdown-content > table tbody tr:nth-child(odd),
-.article-summary > table tbody tr:nth-child(odd) {
+rticle-summary > table tbody tr:nth-child(odd) {
   background: #fff;
 }
 .markdown-content > table tbody tr td,
-.article-summary > table tbody tr td {
+rticle-summary > table tbody tr td {
   padding: 5px 10px;
 }
 .markdown-content hr,
-.article-summary hr {
+rticle-summary hr {
   border: none;
   border-bottom: 1px dashed #e5e5e5;
   margin: 30px 0;
