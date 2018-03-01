@@ -840,6 +840,19 @@ a.article-title:hover {
     font-size: 1.6em;
   }
 }
+div .article-more-link {
+  padding: 0 0 20px 20px;
+}
+.article-more-link a {
+  display: inline-block;
+  line-height: 1em;
+  padding: 6px 15px;
+  border-radius: 15px;
+  background: #ebeef1;
+  color: #999;
+  text-shadow: 0 1px #fff;
+  text-decoration: none;
+}
 .article-meta {
   line-height: 1.6em;
 }
@@ -2103,7 +2116,7 @@ ol.toc {
   margin: 0px;
   display: block;
   overflow-x: auto;
-  padding: 15px 20px;
+  padding: 10px 10px;
   font-size: 14px;
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
   line-height: 22.400000000000002px;
@@ -2116,12 +2129,12 @@ ol.toc {
   border: none;
 }
 .highlight table td.code {
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .highlight .gutter pre {
   color: #666;
   text-align: right;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 .article-entry .highlight {
   margin: 1.6em 0;
