@@ -3,22 +3,15 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Mac环境安装Consul | Jerry船长</title>
+    <title>归档: 2018/3 | Jerry船长</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="简介Consul是HashiCorp公司推出的开源工具，用于实现分布式xit的服务发现与配置，与其他分布式服务发现方案相比，Consul内置了服务注册与发现框架、分布式一致性协议实现、健康检查、Key/Value Store存储，多数据中心方案、不再续约依赖于其他工具（比如Zookeeper），使用起来也较为简单，Consul使用Go语言编写，支持(Linux/Ubuntu/MacOS/Windo">
-<meta name="keywords" content="consul">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Mac环境安装Consul">
-<meta property="og:url" content="http://yoursite.com/2018/02/28/Mac环境安装Consul/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="Jerry船长">
+<meta property="og:url" content="http://yoursite.com/archives/2018/03/index.html">
 <meta property="og:site_name" content="Jerry船长">
-<meta property="og:description" content="简介Consul是HashiCorp公司推出的开源工具，用于实现分布式xit的服务发现与配置，与其他分布式服务发现方案相比，Consul内置了服务注册与发现框架、分布式一致性协议实现、健康检查、Key/Value Store存储，多数据中心方案、不再续约依赖于其他工具（比如Zookeeper），使用起来也较为简单，Consul使用Go语言编写，支持(Linux/Ubuntu/MacOS/Windo">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fow3adiq6bj31kw0ndq5t.jpg">
-<meta property="og:updated_time" content="2018-03-01T07:49:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac环境安装Consul">
-<meta name="twitter:description" content="简介Consul是HashiCorp公司推出的开源工具，用于实现分布式xit的服务发现与配置，与其他分布式服务发现方案相比，Consul内置了服务注册与发现框架、分布式一致性协议实现、健康检查、Key/Value Store存储，多数据中心方案、不再续约依赖于其他工具（比如Zookeeper），使用起来也较为简单，Consul使用Go语言编写，支持(Linux/Ubuntu/MacOS/Windo">
-<meta name="twitter:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fow3adiq6bj31kw0ndq5t.jpg">
+<meta name="twitter:title" content="Jerry船长">
     
 
     
@@ -195,135 +188,46 @@
 </aside>
 
             
-            <section id="main"><article id="post-Mac环境安装Consul" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+            <section id="main"><div class="timeline timeline-wrap">
+    
+            <div class="timeline-row timeline-row-major">
+                <span class="node"><i class="fa fa-calendar"></i></span>
+                <h1 class="title">2018</h1>
+            </div>
         
-        
-            <header class="article-header">
+        <div class="timeline-row">
+            <span class="node"></span>
+            <div class="content">
                 
     
-        <h1 class="article-title" itemprop="name">
-            Mac环境安装Consul
+        <h1 itemprop="name">
+            <a class="timeline-article-title" href="/2018/03/07/麦肯锡思维读书总结/">麦肯锡思维读书总结</a>
         </h1>
     
 
-                
-                    <div class="article-meta">
-                        
+                <div class="article-meta">
+                    
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2018/02/28/Mac环境安装Consul/">
-            <time datetime="2018-02-28T05:15:24.000Z" itemprop="datePublished">2018-02-28</time>
+        <a href="/2018/03/07/麦肯锡思维读书总结/">
+            <time datetime="2018-03-07T02:15:24.000Z" itemprop="datePublished">2018-03-07</time>
         </a>
     </div>
 
 
-                        
+                    
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
+        <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
     </div>
 
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-        
-        
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Consul是HashiCorp公司推出的开源工具，用于实现分布式xit的服务发现与配置，与其他分布式服务发现方案相比，Consul内置了服务注册与发现框架、分布式一致性协议实现、健康检查、Key/Value Store存储，多数据中心方案、不再续约依赖于其他工具（比如Zookeeper），使用起来也较为简单，Consul使用Go语言编写，支持(Linux/Ubuntu/MacOS/Windows);安装包仅包含一个文件，方便与Docker无缝集成。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>通过homebrew包管理器安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">homebrew install consul</span><br></pre></td></tr></table></figure>
-<p>启动consul</p>
-<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2><p>以开发模式启动Consul</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">consul agent -dev # 表示以开发模式运行启动，还有server服务模式运行</span><br></pre></td></tr></table></figure>
-<p>打开浏览器，输入链接：<a href="http://localhost:8500/ui/#/dc1/services访问首页" target="_blank" rel="noopener">http://localhost:8500/ui/#/dc1/services访问首页</a></p>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fow3adiq6bj31kw0ndq5t.jpg" alt=""></p>
-<h2 id="停止服务"><a href="#停止服务" class="headerlink" title="停止服务"></a>停止服务</h2><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><h2 id="集群高可用"><a href="#集群高可用" class="headerlink" title="集群高可用"></a>集群高可用</h2>
+                    
+
+                </div>
             </div>
-        
-        <footer class="article-footer">
-	    
-                <div class ="post-donate">
-    <div id="donate_board" class="donate_bar center">
-        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
-        <span class="donate_txt">
-
-		   如果您觉得文章不错,可以请我喝一杯咖啡！
-        </span>
-        <br>
-      </div>  
-	<div id="donate_guide" class="donate_bar center hidden" >
-		<!-- 支付宝打赏图案 -->
-		<img src="/css/images/alipay.png" alt="支付宝打赏" > 
-		<!-- 微信打赏图案 -->
-		<img src="/css/images/weixinpay.png" alt="微信打赏" >  
-    </div>
-	<script type="text/javascript">
-		document.getElementById('btn_donate').onclick = function(){
-			if($('#donate_guide').hasClass('hidden')){
-				$('#donate_guide').removeClass('hidden');
-			}else{
-				$('#donate_guide').addClass('hidden');
-			}
-		}
-	</script>
+        </div>
+    
 </div>
-<! -- 添加捐赠图标 -->
-
-            
-	    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/consul/">consul</a>
-    </div>
-
-
-            
-    
-        <a href="http://yoursite.com/2018/02/28/Mac环境安装Consul/#comments" id="sourceId::2018/02/28/Mac环境安装Consul/" class="article-comment-link cy_cmt_count">评论</a>
-    
-
-        </footer>
-    </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2018/03/07/麦肯锡思维读书总结/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    麦肯锡思维读书总结
-                
-            </div>
-        </a>
-    
-    
-        <a href="/2018/02/24/我的博客开通了/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">Hexo博客搭建之路</div>
-        </a>
-    
-</nav>
-
-
-    
-</article>
-
-
-    
-    
-        <section id="comments">
-    <div id="SOHUCS" sid="2018/02/28/Mac环境安装Consul/"></div>
-</section>
-    
-
-
 </section>
             
                 
