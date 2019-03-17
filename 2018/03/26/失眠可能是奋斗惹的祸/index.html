@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | Jerry船长</title>
+    <title>Jerry船长</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
+    <meta name="description" content="人应该趁早奋斗深夜2点，广州的夜晚安静的可怕，仿佛跟这座夜生活丰富的城市格格不入，窗外偶尔传来小孩的哭啼声，我却再一次无法入睡，对于来到广州4年的我已司空见惯，曾经无数个夜晚在床上辗转难眠，曾经有科学研究表明，失眠纯粹是人的心理状态，而失眠的主要特征在于不安的意识，每个人心里都有一团野火，看来今晚这把火然到我了 年轻的时候一定要奋斗吗像过去那么多失眠的夜晚一样，习惯性的打开手机，披上那件深蓝色的衬">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Jerry船长">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/26/失眠可能是奋斗惹的祸/index.html">
 <meta property="og:site_name" content="Jerry船长">
+<meta property="og:description" content="人应该趁早奋斗深夜2点，广州的夜晚安静的可怕，仿佛跟这座夜生活丰富的城市格格不入，窗外偶尔传来小孩的哭啼声，我却再一次无法入睡，对于来到广州4年的我已司空见惯，曾经无数个夜晚在床上辗转难眠，曾经有科学研究表明，失眠纯粹是人的心理状态，而失眠的主要特征在于不安的意识，每个人心里都有一团野火，看来今晚这把火然到我了 年轻的时候一定要奋斗吗像过去那么多失眠的夜晚一样，习惯性的打开手机，披上那件深蓝色的衬">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-26T03:56:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jerry船长">
+<meta name="twitter:description" content="人应该趁早奋斗深夜2点，广州的夜晚安静的可怕，仿佛跟这座夜生活丰富的城市格格不入，窗外偶尔传来小孩的哭啼声，我却再一次无法入睡，对于来到广州4年的我已司空见惯，曾经无数个夜晚在床上辗转难眠，曾经有科学研究表明，失眠纯粹是人的心理状态，而失眠的主要特征在于不安的意识，每个人心里都有一团野火，看来今晚这把火然到我了 年轻的时候一定要奋斗吗像过去那么多失眠的夜晚一样，习惯性的打开手机，披上那件深蓝色的衬">
     
 
     
@@ -188,290 +192,55 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2018</h1>
-            </div>
-        
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/29/Eureke集群高可用配置/">Eureke集群高可用配置</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/29/Eureke集群高可用配置/">
-            <time datetime="2018-03-29T08:09:57.000Z" itemprop="datePublished">2018-03-29</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/微服务/">微服务</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/eureka/">eureka</a>
-    </div>
-
-
+            <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        <% if (post.banner) { %>
+            <%- partial('post/banner') %>
+        <% } %>
+        <% if (post.link || post.title) { %>
+            <header class="article-header">
+                <%- partial('post/title', { class_name: 'article-title' }) %>
+                <% if (post.layout != 'page') { %>
+                    <div class="article-meta">
+                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                        <%- partial('post/category') %>
+                    </div>
+                <% } %>
+            </header>
+        <% } %>
+        <%- partial('post/gallery') %>
+        <div class="article-entry" itemprop="articleBody">
+        <% if (index && post.excerpt) { %>
+            <p><%- post.excerpt %></p>
+            <p class="article-more-link">
+                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
+            </p>
+        <% } else { %>
+            <% if (!index && post.toc) { %>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title"><%= __('article.catalogue') %></strong>
+                    <%- toc(post.content) %>
                 </div>
-            </div>
+            <% } %>
+            <%- post.content %>
+        <% } %>
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/26/失眠可能是奋斗惹的祸/">
-            <time datetime="2018-03-26T02:23:58.000Z" itemprop="datePublished">2018-03-26</time>
-        </a>
+        <footer class="article-footer">
+            <% if (!index && theme.donate){ %>
+		<%- partial('donate') %>
+	    <% } %>
+	    <%- partial('post/tag') %>
+            <%- partial('comment/counter', { post: post }) %>
+        </footer>
     </div>
+    <% if (!index) { %>
+        <%- partial('post/nav') %>
+    <% } %>
+</article>
 
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/Tesla微服务治理平台演进/">
-            <time datetime="2018-03-22T08:54:35.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/22/SpringCloud（二）注册中心/">SpringCloud（二）注册中心</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/SpringCloud（二）注册中心/">
-            <time datetime="2018-03-22T08:51:54.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/22/Consul学习（一）环境搭建/">Consul学习（一）环境搭建安装</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/Consul学习（一）环境搭建/">
-            <time datetime="2018-03-22T08:40:55.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/">SpringCloud（一）聊聊SpringCloud</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/">
-            <time datetime="2018-03-22T05:15:24.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/spring-cloud/">spring cloud</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/微服务/">微服务</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/07/麦肯锡思维读书总结/">麦肯锡思维读书总结</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/07/麦肯锡思维读书总结/">
-            <time datetime="2018-03-07T02:15:24.000Z" itemprop="datePublished">2018-03-07</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-    </div>
-
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/02/28/Mac环境安装Consul/">Mac环境安装Consul</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/28/Mac环境安装Consul/">
-            <time datetime="2018-02-28T05:15:24.000Z" itemprop="datePublished">2018-02-28</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/consul/">consul</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/02/24/我的博客开通了/">Hexo博客搭建之路</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/24/我的博客开通了/">
-            <time datetime="2018-02-24T08:09:57.000Z" itemprop="datePublished">2018-02-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
-</div>
+<% if (!index) { %>
+    <%- partial('comment/index') %>
+<% } %>
 </section>
             
                 

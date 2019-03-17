@@ -159,11 +159,11 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                3
+                9
                 <span>文章</span>
             </div>
             <div class="article-info-block">
-                2
+                4
                 <span>标签</span>
             </div>
         </div>
@@ -193,156 +193,55 @@
 </aside>
 
             
-            <section id="main"><article id="post-我的博客开通了" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
+        <% if (post.banner) { %>
+            <%- partial('post/banner') %>
+        <% } %>
+        <% if (post.link || post.title) { %>
             <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-            Hexo博客搭建之路
-        </h1>
-    
-
-                
+                <%- partial('post/title', { class_name: 'article-title' }) %>
+                <% if (post.layout != 'page') { %>
                     <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/24/我的博客开通了/">
-            <time datetime="2018-02-24T08:09:57.000Z" itemprop="datePublished">2018-02-24</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
-    </div>
-
+                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                        <%- partial('post/category') %>
                     </div>
-                
+                <% } %>
             </header>
-        
-        
+        <% } %>
+        <%- partial('post/gallery') %>
         <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-        
-        
-            <p>一直以来就想搭建一个博客，但由于种种原因，最终都不了了之，最近恰好有空，于是参照一些教程，搭建了自己的博客。</p>
-<p>为什么要搭建博客，可能是为了装逼吧，同时也希望将平时工作和生活的相关事情进行总结和积累。</p>
-<p>经过技术调研与对比，博客最终选择为hexo+Github Pages，为什么没有选择其他呢？可能还是觉得太麻烦，也许还是是因为hexo相对来说比较简单吧</p>
-<p>本篇博客将完整介绍Hexo博客的搭建过程，也希望帮助大家少踩点坑，废话少说，开始吧。</p>
-<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p>Hexo是基于node.js的，所以要去<a href="https://nodejs.org/" target="_blank" rel="noopener">官网</a>下载最新稳定版即可，具体安装参考官网步骤即可。</p>
-<p>同样也可以通过Mac包管理器Homebrew来安装,打开终端输入下面命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure>
-<p>继续安装另一个Homebrew Cash包管理器，此包管理器它会自动配置好环境变量，使用我们之前安装的包命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install caskroom/cask/brew-cask</span><br></pre></td></tr></table></figure>
-<p>使用Homebrew安装Node.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
-<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install git</span><br></pre></td></tr></table></figure>
-<h4 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br><span class="line">git -v</span><br></pre></td></tr></table></figure>
-<p>如果能正确显示版本号，则表示环境安装准备成功</p>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>执行以下命令，开始安装Hexo</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<p>创建一个空的目录，用来放置hexo博客文件，进入到目录，输入命令开始初始化</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init jerry_blog</span><br></pre></td></tr></table></figure>
-<p>初始化完成后，系统将提示执行npm install完成依赖及所有的配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-<h2 id="测试Hexo"><a href="#测试Hexo" class="headerlink" title="测试Hexo"></a>测试Hexo</h2><p>Hexo安装配置完成后，打开终端，输入以下命令启动本地服务进行测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>打开浏览器，输入<a href="http://localhost:4000,出现hexo欢迎页面则启动成功" target="_blank" rel="noopener">http://localhost:4000,出现hexo欢迎页面则启动成功</a></p>
-<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h2><p>hexo的博客主题非常多，本博客最终选择的是hexo-theme-icarus主题</p>
-<h4 id="下载hexo-theme-icarus主题配置"><a href="#下载hexo-theme-icarus主题配置" class="headerlink" title="下载hexo-theme-icarus主题配置"></a>下载hexo-theme-icarus主题配置</h4><p>icarus主题包可以在<a href="https://github.com/ppofice/hexo-theme-icarus" target="_blank" rel="noopener">这里</a>找到，也可以使用git下载，切换到hexo博客根目录，然后输入：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
-<p>下载完成之后将根目录的主题设置为icarus</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#将以前的主题修改为icarus</span><br><span class="line">theme: icarus</span><br></pre></td></tr></table></figure>
-<h4 id="主题设置"><a href="#主题设置" class="headerlink" title="主题设置"></a>主题设置</h4><p>logo配置</p>
-<h2 id="hexo常用命令"><a href="#hexo常用命令" class="headerlink" title="hexo常用命令"></a>hexo常用命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo g 生成静态页面至public目录</span><br><span class="line">hexo s 开启本地预览服务端口(htttp://localhost:4000)</span><br><span class="line">hexo d 将.deploy目录部署至服务器</span><br><span class="line">hexo new &quot;postname&quot; 新建文章</span><br><span class="line">hexo new page &quot;pagename&quot; 新建页面</span><br></pre></td></tr></table></figure>
-<h2 id="发布博客到Github服务器"><a href="#发布博客到Github服务器" class="headerlink" title="发布博客到Github服务器"></a>发布博客到Github服务器</h2><p>安装hexo-deployer-git工具，输入命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>配置git账户和密码，打开hexo博客目录的_config.yml文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: 输入GitHub Pages的仓库地址</span><br><span class="line">  branch: 分支名称</span><br></pre></td></tr></table></figure>
-<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2>
-            </div>
-        
+        <% if (index && post.excerpt) { %>
+            <p><%- post.excerpt %></p>
+            <p class="article-more-link">
+                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
+            </p>
+        <% } else { %>
+            <% if (!index && post.toc) { %>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title"><%= __('article.catalogue') %></strong>
+                    <%- toc(post.content) %>
+                </div>
+            <% } %>
+            <%- post.content %>
+        <% } %>
+        </div>
         <footer class="article-footer">
-	    
-                <div class ="post-donate">
-    <div id="donate_board" class="donate_bar center">
-        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
-        <span class="donate_txt">
-
-		   如果您觉得文章不错,可以请我喝一杯咖啡！
-        </span>
-        <br>
-      </div>  
-	<div id="donate_guide" class="donate_bar center hidden" >
-		<!-- 支付宝打赏图案 -->
-		<img src="/css/images/alipay.png" alt="支付宝打赏" > 
-		<!-- 微信打赏图案 -->
-		<img src="/css/images/weixinpay.png" alt="微信打赏" >  
-    </div>
-	<script type="text/javascript">
-		document.getElementById('btn_donate').onclick = function(){
-			if($('#donate_guide').hasClass('hidden')){
-				$('#donate_guide').removeClass('hidden');
-			}else{
-				$('#donate_guide').addClass('hidden');
-			}
-		}
-	</script>
-</div>
-<! -- 添加捐赠图标 -->
-
-            
-	    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
-
-
-            
-    
-        <a href="http://yoursite.com/2018/02/24/我的博客开通了/#comments" id="sourceId::2018/02/24/我的博客开通了/" class="article-comment-link cy_cmt_count">评论</a>
-    
-
+            <% if (!index && theme.donate){ %>
+		<%- partial('donate') %>
+	    <% } %>
+	    <%- partial('post/tag') %>
+            <%- partial('comment/counter', { post: post }) %>
         </footer>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2018/02/28/Mac环境安装Consul/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    Mac环境安装Consul
-                
-            </div>
-        </a>
-    
-    
-</nav>
-
-
-    
+    <% if (!index) { %>
+        <%- partial('post/nav') %>
+    <% } %>
 </article>
 
-
-    
-    
-        <section id="comments">
-    <div id="SOHUCS" sid="2018/02/24/我的博客开通了/"></div>
-</section>
-    
-
-
+<% if (!index) { %>
+    <%- partial('comment/index') %>
+<% } %>
 </section>
             
                 
@@ -371,7 +270,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">分类</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/技术杂谈/">技术杂谈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/spring-cloud/">spring cloud</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/微服务/">微服务</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/技术杂谈/">技术杂谈</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -380,7 +279,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/consul/">consul</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/consul/">consul</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eureka/">eureka</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微服务/">微服务</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -389,7 +288,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/consul/" style="font-size: 10px;">consul</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+            <a href="/tags/consul/" style="font-size: 10px;">consul</a> <a href="/tags/eureka/" style="font-size: 10px;">eureka</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/微服务/" style="font-size: 10px;">微服务</a>
         </div>
     </div>
 
@@ -418,7 +317,7 @@
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2018 朱斌<br>
+            &copy; 2019 朱斌<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
