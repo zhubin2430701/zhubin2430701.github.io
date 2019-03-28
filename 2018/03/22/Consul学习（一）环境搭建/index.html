@@ -192,55 +192,119 @@
 </aside>
 
             
-            <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Consul学习（一）环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Consul学习（一）环境搭建安装
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/22/Consul学习（一）环境搭建/">
+            <time datetime="2018-03-22T08:40:55.000Z" itemprop="datePublished">2018-03-22</time>
+        </a>
+    </div>
+
+
+                        
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+        
+        
+            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Consul是韩国Harkip公司开源的一款服务发现和注册的工具，基于go语言开发实现，提供服务发现、健康检查、K/V存储、多数据中心</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>去官网获取地址</p>
+<h2 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h2>
+            </div>
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+                <div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
+
+		   如果您觉得文章不错,可以请我喝一杯咖啡！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="/css/images/alipay.png" alt="支付宝打赏" > 
+		<!-- 微信打赏图案 -->
+		<img src="/css/images/weixinpay.png" alt="微信打赏" >  
+    </div>
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			if($('#donate_guide').hasClass('hidden')){
+				$('#donate_guide').removeClass('hidden');
+			}else{
+				$('#donate_guide').addClass('hidden');
+			}
+		}
+	</script>
+</div>
+<! -- 添加捐赠图标 -->
+
+            
+	    
+
+            
+    
+        <a href="http://yoursite.com/2018/03/22/Consul学习（一）环境搭建/#comments" id="sourceId::2018/03/22/Consul学习（一）环境搭建/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/03/22/SpringCloud（二）注册中心/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    SpringCloud（二）注册中心
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">SpringCloud（一）聊聊SpringCloud</div>
+        </a>
+    
+</nav>
+
+
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
+
+    
+    
+        <section id="comments">
+    <div id="SOHUCS" sid="2018/03/22/Consul学习（一）环境搭建/"></div>
+</section>
+    
+
+
 </section>
             
                 

@@ -189,514 +189,714 @@
 
             
             <section id="main">
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+    <article id="post-读《重新理解创业》有感" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2019/03/28/读《重新理解创业》有感/">读《重新理解创业》有感</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2019/03/28/读《重新理解创业》有感/">
+            <time datetime="2019-03-28T14:49:24.000Z" itemprop="datePublished">2019-03-28</time>
+        </a>
+    </div>
+
+
+                        
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p>最近读完易到创始人周航写的重新理解创业,非常深刻剖析了易到为什么失败。讲述了作者从南到北的两段创业故事。从公司战略、竞争、品牌、流量、钱、领导力、领导者的自我成长、打造团队、企业成长、应对低谷、突破瓶颈、未来等多维度方面进行了重新理解分析。帮助许多创业者在这段旅程中学习失败经验。</p>
+<h4 id="公司战略"><a href="#公司战略" class="headerlink" title="公司战略"></a>公司战略</h4><p>创业中经常会听到“战略”这一个关键词，战略对任何公司来说，都是决定命令走向的关键问题，但是我们都知道，找到一个真正很好的战略是非常难的，为了找到正确正确，第一个问题需要弄清楚我们到底应该是概念先行，还是问题驱动。很多互联网创业者非常擅于炒概念。但是从解决问题的角度出发解决真实存在的需求，这样的出发点能非常好的帮助创业者明确创业中的关键问题。那既然我们的出发点是解决问题，那么我们知道如何去甄别需求。很多时候往往不要有太多执念。不要为了追赶概念而去创业，而应该考虑的是如何解决用户需求。</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2019/03/28/读《重新理解创业》有感/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+
+            
+    
+        <a href="http://yoursite.com/2019/03/28/读《重新理解创业》有感/#comments" id="sourceId::2019/03/28/读《重新理解创业》有感/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-Eureke集群高可用配置" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/29/Eureke集群高可用配置/">Eureke集群高可用配置</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/29/Eureke集群高可用配置/">
+            <time datetime="2018-03-29T08:09:57.000Z" itemprop="datePublished">2018-03-29</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/微服务/">微服务</a>
+    </div>
+
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p>最近在进行微服务治理落地时，选型了Eureka作为注册中心的组件，网上关于搭建Eureka高可用集群的资料太碎片化，很多都是复制粘贴而来，并没有完整的集群搭建过程，因此专门搭建了一个项目来看看Eureka集群到底该怎么玩</p>
+<h2 id="Server端配置"><a href="#Server端配置" class="headerlink" title="Server端配置"></a>Server端配置</h2><p>1.创建Eureka Server项目,添加pom.xml配置</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/03/29/Eureke集群高可用配置/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/eureka/">eureka</a>
+    </div>
+
+
+            
+    
+        <a href="http://yoursite.com/2018/03/29/Eureke集群高可用配置/#comments" id="sourceId::2018/03/29/Eureke集群高可用配置/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-失眠可能是奋斗惹的祸" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
-            <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
-                    <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
-                    </div>
-                <% } %>
-            </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h1 id="人应该趁早奋斗"><a href="#人应该趁早奋斗" class="headerlink" title="人应该趁早奋斗"></a>人应该趁早奋斗</h1><p>深夜2点，广州的夜晚安静的可怕，仿佛跟这座夜生活丰富的城市格格不入，窗外偶尔传来小孩的哭啼声，我却再一次无法入睡，对于来到广州4年的我已司空见惯，曾经无数个夜晚在床上辗转难眠，曾经有科学研究表明，失眠纯粹是人的心理状态，而失眠的主要特征在于不安的意识，每个人心里都有一团野火，看来今晚这把火然到我了</p>
+<h2 id="年轻的时候一定要奋斗吗"><a href="#年轻的时候一定要奋斗吗" class="headerlink" title="年轻的时候一定要奋斗吗"></a>年轻的时候一定要奋斗吗</h2><p>像过去那么多失眠的夜晚一样，习惯性的打开手机，披上那件深蓝色的衬衣外套，手指随着屏幕不断滑动，<br>突然一篇《要么奋斗，要么滚蛋》的文章映入眼前，全文讲述了作者的奋斗经历，唯有放下所有无用的行李，才有一点点胜出的可能。</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/03/26/失眠可能是奋斗惹的祸/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+
+            
+    
+        <a href="http://yoursite.com/2018/03/26/失眠可能是奋斗惹的祸/#comments" id="sourceId::2018/03/26/失眠可能是奋斗惹的祸/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-Tesla微服务治理平台演进" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
-            <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
-                    <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
-                    </div>
-                <% } %>
-            </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><h3 id="Tesla是什么"><a href="#Tesla是什么" class="headerlink" title="Tesla是什么"></a>Tesla是什么</h3><blockquote>
+<p><strong>Tesla是向日葵平台架构组基于SpringCloud技术开发的微服务治理平台</strong>，Tesla并不是一个框架，而是一套完整的微服务治理解决方案，主要包括：</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/03/22/Tesla微服务治理平台演进/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+
+            
+    
+        <a href="http://yoursite.com/2018/03/22/Tesla微服务治理平台演进/#comments" id="sourceId::2018/03/22/Tesla微服务治理平台演进/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-SpringCloud（二）注册中心" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/22/SpringCloud（二）注册中心/">SpringCloud（二）注册中心</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/22/SpringCloud（二）注册中心/">
+            <time datetime="2018-03-22T08:51:54.000Z" itemprop="datePublished">2018-03-22</time>
+        </a>
+    </div>
+
+
+                        
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+            
+        
+        
+            <h2 id="为什么需要服务发现"><a href="#为什么需要服务发现" class="headerlink" title="为什么需要服务发现"></a>为什么需要服务发现</h2><p>微服务架构火了之后，</p>
+
+            </div>
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+
+            
+    
+        <a href="http://yoursite.com/2018/03/22/SpringCloud（二）注册中心/#comments" id="sourceId::2018/03/22/SpringCloud（二）注册中心/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-Consul学习（一）环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/22/Consul学习（一）环境搭建/">Consul学习（一）环境搭建安装</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/22/Consul学习（一）环境搭建/">
+            <time datetime="2018-03-22T08:40:55.000Z" itemprop="datePublished">2018-03-22</time>
+        </a>
+    </div>
+
+
+                        
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Consul是韩国Harkip公司开源的一款服务发现和注册的工具，基于go语言开发实现，提供服务发现、健康检查、K/V存储、多数据中心</p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>去官网获取地址</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/03/22/Consul学习（一）环境搭建/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+
+            
+    
+        <a href="http://yoursite.com/2018/03/22/Consul学习（一）环境搭建/#comments" id="sourceId::2018/03/22/Consul学习（一）环境搭建/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-SpringCloud（一）聊聊SpringCloud" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/">SpringCloud（一）聊聊SpringCloud</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/">
+            <time datetime="2018-03-22T05:15:24.000Z" itemprop="datePublished">2018-03-22</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/spring-cloud/">spring cloud</a>
+    </div>
+
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h2 id="SpringCloud是什么"><a href="#SpringCloud是什么" class="headerlink" title="SpringCloud是什么"></a>SpringCloud是什么</h2><p><strong>Spring Cloud</strong>是一个依赖于SpringBoot快速构建分布式系统的通用模型的云应用开发工具（如服务发现注册、配置中心、消息中心、负载均衡、断路器、智能路由、微代理、控制总线）等，是一系列框架的集合</p>
+<p><strong>Spring Cloud</strong>本身并未有重复造轮子，而是将目前各公司开发比较成熟、经得起考验的服务框架组合起来，通过Spring Boot的风格进行再封装屏蔽掉复杂的配置和实现原理，帮助开发者提供一套简单易懂、易部署、易维护的分布式系统开发工具包</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/微服务/">微服务</a>
+    </div>
+
+
+            
+    
+        <a href="http://yoursite.com/2018/03/22/SpringCloud（一）聊聊SpringCloud/#comments" id="sourceId::2018/03/22/SpringCloud（一）聊聊SpringCloud/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-麦肯锡思维读书总结" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/03/07/麦肯锡思维读书总结/">麦肯锡思维读书总结</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/03/07/麦肯锡思维读书总结/">
+            <time datetime="2018-03-07T02:15:24.000Z" itemprop="datePublished">2018-03-07</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
+    </div>
+
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p>最近抽时间读了这本书<strong>麦肯锡思维</strong>，本书整体的内容虽然亮点不多，虽然像是从其他一些成功学或麦肯锡工作方法拼凑而来的，但是有一些方法和思维也值得我们学习和借鉴,同时这也是我写的第一篇读书笔记，希望自己能继续提高。</p>
+<p>麦肯锡公司作为全球最成功的战略咨询公司之一,通过“麦肯锡人”长期为客户解决商业问题的过程中，学习他们独特的思考方法，运用到自己的工作、学习、生活中，更高效的达到自己的目标。</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/03/07/麦肯锡思维读书总结/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+
+            
+    
+        <a href="http://yoursite.com/2018/03/07/麦肯锡思维读书总结/#comments" id="sourceId::2018/03/07/麦肯锡思维读书总结/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-Mac环境安装Consul" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/02/28/Mac环境安装Consul/">Mac环境安装Consul</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/02/28/Mac环境安装Consul/">
+            <time datetime="2018-02-28T05:15:24.000Z" itemprop="datePublished">2018-02-28</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
+    </div>
+
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Consul是HashiCorp公司推出的开源工具，用于实现分布式xit的服务发现与配置，与其他分布式服务发现方案相比，Consul内置了服务注册与发现框架、分布式一致性协议实现、健康检查、Key/Value Store存储，多数据中心方案、不再续约依赖于其他工具（比如Zookeeper），使用起来也较为简单，Consul使用Go语言编写，支持(Linux/Ubuntu/MacOS/Windows);安装包仅包含一个文件，方便与Docker无缝集成。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h4 id="MacOS下安装"><a href="#MacOS下安装" class="headerlink" title="MacOS下安装"></a>MacOS下安装</h4><p>通过homebrew包管理器安装</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/02/28/Mac环境安装Consul/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/consul/">consul</a>
+    </div>
+
+
+            
+    
+        <a href="http://yoursite.com/2018/02/28/Mac环境安装Consul/#comments" id="sourceId::2018/02/28/Mac环境安装Consul/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
 
 
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
+
+    <article id="post-我的博客开通了" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-        <% if (post.banner) { %>
-            <%- partial('post/banner') %>
-        <% } %>
-        <% if (post.link || post.title) { %>
+        
+        
             <header class="article-header">
-                <%- partial('post/title', { class_name: 'article-title' }) %>
-                <% if (post.layout != 'page') { %>
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2018/02/24/我的博客开通了/">Hexo博客搭建之路</a>
+        </h1>
+    
+
+                
                     <div class="article-meta">
-                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
-                        <%- partial('post/category') %>
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2018/02/24/我的博客开通了/">
+            <time datetime="2018-02-24T08:09:57.000Z" itemprop="datePublished">2018-02-24</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
+    </div>
+
                     </div>
-                <% } %>
+                
             </header>
-        <% } %>
-        <%- partial('post/gallery') %>
+        
+        
         <div class="article-entry" itemprop="articleBody">
-        <% if (index && post.excerpt) { %>
-            <p><%- post.excerpt %></p>
-            <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
-            </p>
-        <% } else { %>
-            <% if (!index && post.toc) { %>
-                <div id="toc" class="toc-article">
-                <strong class="toc-title"><%= __('article.catalogue') %></strong>
-                    <%- toc(post.content) %>
-                </div>
-            <% } %>
-            <%- post.content %>
-        <% } %>
-        </div>
+        
+        
+            
+                
+                
+                    
+                    
+                
+                    
+                    
+                
+                
+                    
+                    <p><p>一直以来就想搭建一个博客，但由于种种原因，最终都不了了之，最近恰好有空，于是参照一些教程，搭建了自己的博客。</p>
+<p>为什么要搭建博客，可能是为了装逼吧，同时也希望将平时工作和生活的相关事情进行总结和积累。</p>
+<p>
+                
+            
+        
+        
+	    </div>
+	    <div class="article-more-link">
+                <a href="/2018/02/24/我的博客开通了/#more">查看更多</a>
+            </div>  
+        
         <footer class="article-footer">
-            <% if (!index && theme.donate){ %>
-		<%- partial('donate') %>
-	    <% } %>
-	    <%- partial('post/tag') %>
-            <%- partial('comment/counter', { post: post }) %>
+	    
+	    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/hexo/">hexo</a>
+    </div>
+
+
+            
+    
+        <a href="http://yoursite.com/2018/02/24/我的博客开通了/#comments" id="sourceId::2018/02/24/我的博客开通了/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
         </footer>
     </div>
-    <% if (!index) { %>
-        <%- partial('post/nav') %>
-    <% } %>
+    
 </article>
 
-<% if (!index) { %>
-    <%- partial('comment/index') %>
-<% } %>
+
 
 </section>
             
