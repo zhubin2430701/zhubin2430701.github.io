@@ -194,152 +194,55 @@
 </aside>
 
             
-            <section id="main"><article id="post-麦肯锡思维读书总结" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %><%= (post.direction && post.direction.toLowerCase() === 'rtl' ? ' rtl' : '') %>" itemscope itemprop="blogPost">
     <div class="article-inner">
-        
-        
+        <% if (post.banner) { %>
+            <%- partial('post/banner') %>
+        <% } %>
+        <% if (post.link || post.title) { %>
             <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-            麦肯锡思维读书总结
-        </h1>
-    
-
-                
+                <%- partial('post/title', { class_name: 'article-title' }) %>
+                <% if (post.layout != 'page') { %>
                     <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/07/麦肯锡思维读书总结/">
-            <time datetime="2018-03-07T02:15:24.000Z" itemprop="datePublished">2018-03-07</time>
-        </a>
-    </div>
-
-
-                        
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-    </div>
-
+                        <%- partial('post/date', { class_name: 'article-date', date_format: null }) %>
+                        <%- partial('post/category') %>
                     </div>
-                
+                <% } %>
             </header>
-        
-        
+        <% } %>
+        <%- partial('post/gallery') %>
         <div class="article-entry" itemprop="articleBody">
-        
-        
-            
-        
-        
-            <p>最近抽时间读了这本书<strong>麦肯锡思维</strong>，本书整体的内容虽然亮点不多，虽然像是从其他一些成功学或麦肯锡工作方法拼凑而来的，但是有一些方法和思维也值得我们学习和借鉴,同时这也是我写的第一篇读书笔记，希望自己能继续提高。</p>
-<p>麦肯锡公司作为全球最成功的战略咨询公司之一,通过“麦肯锡人”长期为客户解决商业问题的过程中，学习他们独特的思考方法，运用到自己的工作、学习、生活中，更高效的达到自己的目标。</p>
-<p><img src="https://img1.doubanio.com/lpic/s28305189.jpg" alt=""></p>
-<h2 id="关于工作"><a href="#关于工作" class="headerlink" title="关于工作"></a>关于工作</h2><h3 id="正确的做事和做正确的事"><a href="#正确的做事和做正确的事" class="headerlink" title="正确的做事和做正确的事"></a>正确的做事和做正确的事</h3><p>大家经常在工作中会遇到“正确的做事”和“做正确的事”，两者看似相近，实则有本质的区别，要做好一件事，必须是以“正确”为前提，也就是所做的事正确，如果方向偏离，后面则会离目标越来越远。</p>
-<p>我们说，行动前周密的计划就是做正确的事、这是一种思想和意识，麦肯锡的原则就是既要正确的做事，更要做正确的事，而大前提就是发现“正确的问题”，这是做正确的事的起点。</p>
-<h3 id="工作效率二八法则"><a href="#工作效率二八法则" class="headerlink" title="工作效率二八法则"></a>工作效率二八法则</h3><p>我们经常会发现工作中，重要的事情占少数，不重要的事情占多数，因此当我们开始一项工作或做某件事前，我们要精心安排好事情的主次，放在首位的应该是最重要的事情。</p>
-<p>我们每天面对的食物纷繁杂陈，对这些事物进行分类，大致可以分为四个象限，通过这样的归类，复杂的事情就会变得清晰起来：</p>
-<ul>
-<li>重要且紧急的事情</li>
-<li>重要但不紧急的事情</li>
-<li>紧急单不重要的事情</li>
-<li>既不紧急也不重要的事情</li>
-</ul>
-<h3 id="关键驱动点"><a href="#关键驱动点" class="headerlink" title="关键驱动点"></a>关键驱动点</h3><p>当我们解决问题时，需要找到某项工作或事情中的关键驱动点，关键驱动点也就是在事情中起到关键的，决定性作用的因素，当我们找到了关键驱动点，也就找到了问题的核心，从关键驱动点入手，才能有效的解决问题。</p>
-<h2 id="关于思维"><a href="#关于思维" class="headerlink" title="关于思维"></a>关于思维</h2><h3 id="MECE分析法"><a href="#MECE分析法" class="headerlink" title="MECE分析法"></a>MECE分析法</h3><p>麦肯锡人认为，在解决一个问题时，如果能够全面考虑这个问题的各种情况，真正做到“完全穷尽”，那么必定能够完整清晰的呈现出这个问题的各个方法，从而彻底、有效的解决各个问题</p>
-<p>MECC读作“me-see”,意思是“相互独立，完全穷尽”，那么这个抽象的句子到底是什么意思呢，当我们解决一个问题时，我们应当从最高层次开始，将你必须解决问题的各个部分全部罗列出来，当你已经确定了这些内容后，此时我们需要思考其中的每一项是否都是相互独立的。然后，你要继续思考，问题的每一方面是否都来自你列出的每个项目，而且是其中的唯一的一项，也就是说，你是否把所有的项目都列全了？如果答案是肯定的，那么这些项目就是“完全穷尽的”。</p>
-<h3 id="逻辑树分析法"><a href="#逻辑树分析法" class="headerlink" title="逻辑树分析法"></a>逻辑树分析法</h3><p>在麦肯锡人看来，逻辑思维与理论体系同等重要，逻辑树又被称为问题树、演绎树或分类树，主要表现在分层罗列问题的所有子问题，从最高一层开始，逐层向下扩展分析，将已知的问题作为逻辑树的树干，然后思考哪些问题与这个已知问题相关，将这些问题或子任务成功逻辑树的树枝，也就是我们经常说理解的”<strong>金字塔原理</strong>“,通过”逻辑树分析法”能够帮助你理清思路，避免重复性的工作或无关的思考。</p>
-<h3 id="头脑风暴"><a href="#头脑风暴" class="headerlink" title="头脑风暴"></a>头脑风暴</h3><p>麦肯锡人在解决问题经常会组织头脑风暴会议，头脑风暴旨在以明确的方式组织专家或成员进行讨论，大家“自由‘地提出更多解决方案，当然在实施头脑风暴过程中还需要注意以下几点：</p>
-<ul>
-<li>协调好上下级的关系</li>
-<li>缓解环境造成的压力</li>
-<li>如何认识批评和职责</li>
-<li>要有确定的主题</li>
-<li>对方案做好分析</li>
-</ul>
-<h2 id="关于习惯"><a href="#关于习惯" class="headerlink" title="关于习惯"></a>关于习惯</h2><p>一个的习惯养成大约需要21天，只有你坚持21天，那么恭喜你，你一大功告成。接下来你就能持久的坚持下去了。</p>
-<p>每天通过一张图表来管理你的工作，当我们做好一张简单的表格，就会让你在多变繁杂的工作生活中轻松应对。</p>
-<p>经常在工作中总结和记录工作日志，每天下班前，总结今天工作的得与失，汲取一些经验和教训，对改进工作，提高生活质量都是有益处的，我们提倡动手干，也要提倡动脑筋。同时，记工作日志也是一个很好的习惯。</p>
-<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>我们的工作离不开团队的支持，当我们面临复杂的工作，仅仅依靠个人很难取得很好的效果，而依靠团队的力量，集合各方面专家能手的聪明才智，很多问题解决起来就轻松多了</p>
-<p>有时候，我们也要从别人成功的经验中学的很多方法，从别人失败的教训中总结少走弯路。在初入职场或工作生活中，好的向导能让我们不再那么迷茫，能引导我们持续进步提高，更快地达成目标。</p>
-
-            </div>
-        
+        <% if (index && post.excerpt) { %>
+            <p><%- post.excerpt %></p>
+            <p class="article-more-link">
+                <a href="<%- url_for(post.path) %>#more"><%= __('article.more') %></a>
+            </p>
+        <% } else { %>
+            <% if (!index && post.toc) { %>
+                <div id="toc" class="toc-article">
+                <strong class="toc-title"><%= __('article.catalogue') %></strong>
+                    <%- toc(post.content) %>
+                </div>
+            <% } %>
+            <%- post.content %>
+        <% } %>
+        </div>
         <footer class="article-footer">
-	    
-                <div class ="post-donate">
-    <div id="donate_board" class="donate_bar center">
-        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
-        <span class="donate_txt">
-
-		   如果您觉得文章不错,可以请我喝一杯咖啡！
-        </span>
-        <br>
-      </div>  
-	<div id="donate_guide" class="donate_bar center hidden" >
-		<!-- 支付宝打赏图案 -->
-		<img src="/css/images/alipay.png" alt="支付宝打赏" > 
-		<!-- 微信打赏图案 -->
-		<img src="/css/images/weixinpay.png" alt="微信打赏" >  
-    </div>
-	<script type="text/javascript">
-		document.getElementById('btn_donate').onclick = function(){
-			if($('#donate_guide').hasClass('hidden')){
-				$('#donate_guide').removeClass('hidden');
-			}else{
-				$('#donate_guide').addClass('hidden');
-			}
-		}
-	</script>
-</div>
-<! -- 添加捐赠图标 -->
-
-            
-	    
-
-            
-    
-        <a href="http://yoursite.com/2018/03/07/麦肯锡思维读书总结/#comments" id="sourceId::2018/03/07/麦肯锡思维读书总结/" class="article-comment-link cy_cmt_count">评论</a>
-    
-
+            <% if (!index && theme.donate){ %>
+		<%- partial('donate') %>
+	    <% } %>
+	    <%- partial('post/tag') %>
+            <%- partial('comment/counter', { post: post }) %>
         </footer>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">上一篇</strong>
-            <div class="article-nav-title">
-                
-                    SpringCloud（一）聊聊SpringCloud
-                
-            </div>
-        </a>
-    
-    
-        <a href="/2018/02/28/Mac环境安装Consul/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">下一篇</strong>
-            <div class="article-nav-title">Mac环境安装Consul</div>
-        </a>
-    
-</nav>
-
-
-    
+    <% if (!index) { %>
+        <%- partial('post/nav') %>
+    <% } %>
 </article>
 
-
-    
-    
-        <section id="comments">
-    <div id="SOHUCS" sid="2018/03/07/麦肯锡思维读书总结/"></div>
-</section>
-    
-
-
+<% if (!index) { %>
+    <%- partial('comment/index') %>
+<% } %>
 </section>
             
                 
