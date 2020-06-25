@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2018 | Jerry船长</title>
+    <title>Jerry船长</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
+    <meta name="description" content="从1996年初Sun公司发布的JDK 1.0中所包含的Sun Classic VM到今天，曾经涌现、湮灭过许多或经典或有些或有特色的虚拟机实现。让我们一起来回顾一下Java虚拟机家族的发展轨迹和历史变迁 Sun ClassicExact VM以今天的视角来看，Sun ClassicExact VM的技术可能很原始，这款虚拟机的使命也早已终结。但仅凭它“世界上第一款商用Java虚拟机”的头衔，就足够">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Jerry船长">
-<meta property="og:url" content="http://yoursite.com/archives/2018/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/04/03/从1996年初Sun公司发布的JDK 1/index.html">
 <meta property="og:site_name" content="Jerry船长">
+<meta property="og:description" content="从1996年初Sun公司发布的JDK 1.0中所包含的Sun Classic VM到今天，曾经涌现、湮灭过许多或经典或有些或有特色的虚拟机实现。让我们一起来回顾一下Java虚拟机家族的发展轨迹和历史变迁 Sun ClassicExact VM以今天的视角来看，Sun ClassicExact VM的技术可能很原始，这款虚拟机的使命也早已终结。但仅凭它“世界上第一款商用Java虚拟机”的头衔，就足够">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-30T02:35:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jerry船长">
+<meta name="twitter:description" content="从1996年初Sun公司发布的JDK 1.0中所包含的Sun Classic VM到今天，曾经涌现、湮灭过许多或经典或有些或有特色的虚拟机实现。让我们一起来回顾一下Java虚拟机家族的发展轨迹和历史变迁 Sun ClassicExact VM以今天的视角来看，Sun ClassicExact VM的技术可能很原始，这款虚拟机的使命也早已终结。但仅凭它“世界上第一款商用Java虚拟机”的头衔，就足够">
     
 
     
@@ -154,7 +158,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                11
+                12
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -188,290 +192,92 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2018</h1>
+            <section id="main"><article id="post-从1996年初Sun公司发布的JDK 1" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+        
+            
+        
+        
+            <p>从1996年初Sun公司发布的JDK 1.0中所包含的Sun Classic VM到今天，曾经涌现、湮灭过许多或经典或有些或有特色的虚拟机实现。让我们一起来回顾一下Java虚拟机家族的发展轨迹和历史变迁</p>
+<h4 id="Sun-ClassicExact-VM"><a href="#Sun-ClassicExact-VM" class="headerlink" title="Sun ClassicExact VM"></a>Sun ClassicExact VM</h4><p>以今天的视角来看，Sun ClassicExact VM的技术可能很原始，这款虚拟机的使命也早已终结。但仅凭它“世界上第一款商用Java虚拟机”的头衔，就足够有让历史记住它的理由。这款虚拟机只能使用纯解释器方式来执行Java代码，如果要使用JIT编译器，就必须进行外挂，但是假如外挂了JIT编译器，JIT编译器就完全接管了虚拟机的执行系统，解释器便不再工作了。</p>
+<p>Sun的虚拟机团队努力去解决Classic VM所面临的各种问题，提升运行效率。在JDK 1.2时，曾在Solaris平台上发布过一款名为Exact VM的虚拟机，它的执行系统已经具备现代高性能虚拟机的雏形：如两级即时编译器，编译器与解释去混合工作模式。Exact VM因它使用准确式内存管理而得名。</p>
+<p>虽然Exact VM的技术相对Classic VM来说先进了许多，但是在商业应用上只存在了很短的时间就被HotSpot VM所取代。甚至还没来得及发布Windows和Linux平台下的商用版本。而Classic VM的生命周期则相对长了许多。它在JDK1.2之前是Sun JDK中唯一的虚拟机。在JDK 1.2时，它与HotSpot VM并存，但默认使用的是Classic VM,而在JDK1.3时，HotSpot VM成为默认虚拟机。</p>
+<h4 id="Sun-HotSpot-VM"><a href="#Sun-HotSpot-VM" class="headerlink" title="Sun HotSpot VM"></a>Sun HotSpot VM</h4><p>提起HotSpot VM，相信所有Java程序员都知道，它是Sun JDK和Open JDK中所带的虚拟机。也是目前使用范围最广的虚拟机。但是，不一定很多人知道的是，这个目前看起来“血统纯正”的虚拟机在最初并非由Sun公司开发，而是由一家名为“Longview Technologies”的小公司设计的。甚至这个虚拟机最初并非是为Java语言而开发的。Sun公司注意到这块虚拟机在JIT编译上有许多优秀的理念和实际效果。在1997年收购了Longview Technologies公司，从而获得了HotSpot VM。</p>
+<p>HotSpot VM既继承了Sun之前两款商用虚拟机的优点（如准确式的内存管理），也有许多自己新的技术优势。如它的名称中的HotSpot指的就是它的热点代码探测技术。</p>
+<h4 id="BEA-JRockit-IBM-J9-VM"><a href="#BEA-JRockit-IBM-J9-VM" class="headerlink" title="BEA JRockit/IBM J9 VM"></a>BEA JRockit/IBM J9 VM</h4><p>前面介绍了Sun公司的各种虚拟机。除了Sun公司以外，其他组织，公司也研发过不少虚拟机实现，其中规模最大、最著名的就是BEA和IBM公司了。</p>
+<p>JRockit VM</p>
+
             </div>
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/29/Eureke集群高可用配置/">Eureke集群高可用配置</a>
-        </h1>
-    
+        <footer class="article-footer">
+	    
+                <div class ="post-donate">
+    <div id="donate_board" class="donate_bar center">
+        <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏"></a>
+        <span class="donate_txt">
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/29/Eureke集群高可用配置/">
-            <time datetime="2018-03-29T08:09:57.000Z" itemprop="datePublished">2018-03-29</time>
-        </a>
+		   如果您觉得文章不错,可以请我喝一杯咖啡！
+        </span>
+        <br>
+      </div>  
+	<div id="donate_guide" class="donate_bar center hidden" >
+		<!-- 支付宝打赏图案 -->
+		<img src="/css/images/alipay.png" alt="支付宝打赏" > 
+		<!-- 微信打赏图案 -->
+		<img src="/css/images/weixinpay.png" alt="微信打赏" >  
     </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/微服务/">微服务</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/eureka/">eureka</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/26/失眠可能是奋斗惹的祸/">
-            <time datetime="2018-03-26T02:23:58.000Z" itemprop="datePublished">2018-03-26</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/Tesla微服务治理平台演进/">
-            <time datetime="2018-03-22T08:54:35.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/22/SpringCloud（二）注册中心/">SpringCloud（二）注册中心</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/SpringCloud（二）注册中心/">
-            <time datetime="2018-03-22T08:51:54.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/22/Consul学习（一）环境搭建/">Consul学习（一）环境搭建安装</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/Consul学习（一）环境搭建/">
-            <time datetime="2018-03-22T08:40:55.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/">SpringCloud（一）聊聊SpringCloud</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/22/SpringCloud（一）聊聊SpringCloud/">
-            <time datetime="2018-03-22T05:15:24.000Z" itemprop="datePublished">2018-03-22</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/spring-cloud/">spring cloud</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/微服务/">微服务</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/03/07/麦肯锡思维读书总结/">麦肯锡思维读书总结</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/03/07/麦肯锡思维读书总结/">
-            <time datetime="2018-03-07T02:15:24.000Z" itemprop="datePublished">2018-03-07</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
-    </div>
-
-                    
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/02/28/Mac环境安装Consul/">Mac环境安装Consul</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/28/Mac环境安装Consul/">
-            <time datetime="2018-02-28T05:15:24.000Z" itemprop="datePublished">2018-02-28</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/consul/">consul</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2018/02/24/我的博客开通了/">Hexo博客搭建之路</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2018/02/24/我的博客开通了/">
-            <time datetime="2018-02-24T08:09:57.000Z" itemprop="datePublished">2018-02-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/技术杂谈/">技术杂谈</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/hexo/">hexo</a>
-    </div>
-
-
-                </div>
-            </div>
-        </div>
-    
+	<script type="text/javascript">
+		document.getElementById('btn_donate').onclick = function(){
+			if($('#donate_guide').hasClass('hidden')){
+				$('#donate_guide').removeClass('hidden');
+			}else{
+				$('#donate_guide').addClass('hidden');
+			}
+		}
+	</script>
 </div>
+<! -- 添加捐赠图标 -->
+
+            
+	    
+
+            
+    
+        <a href="http://yoursite.com/2019/04/03/从1996年初Sun公司发布的JDK 1/#comments" id="sourceId::2019/04/03/从1996年初Sun公司发布的JDK 1/" class="article-comment-link cy_cmt_count">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/03/28/SpringBoot2.0 (一) 入门/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">SpringBoot2.0 (一) 入门</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    
+        <section id="comments">
+    <div id="SOHUCS" sid="2019/04/03/从1996年初Sun公司发布的JDK 1/"></div>
+</section>
+    
+
+
 </section>
             
                 
